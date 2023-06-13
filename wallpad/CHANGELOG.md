@@ -10,3 +10,13 @@
 ```
 
 
+  DEVICE_CONFIG: {
+    'switch/homenet/breaker3-1': { name: '엘베호출', unique_id: 'switch-homenet-breaker3-1', state_topic: '~/elv/state', command_topic: '~/elv/command' },
+
+  //          엘베       34
+
+
+    // breaker2(away): f7 0e 01 2a 04 40 10   00 19 02 1b 04 82
+
+
+    { base_topic: 'switch/homenet/breaker3-1', commandHex: 'f7 0b 01 34 02 41 10 06 00 9c ee'.toBuffer(), ackHex: 'f7 0b 01 34 04 41 10 00 06 9a ee'.toBuffer(), stateName: 'elevator', state: 'CALL' }
